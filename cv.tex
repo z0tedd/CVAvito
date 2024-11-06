@@ -1,0 +1,137 @@
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{geometry}
+\geometry{top=20mm, bottom=20mm, left=20mm, right=20mm}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{titlesec}
+%%% Работа с русским языком
+\titleformat{\section}{\normalfont\bfseries}{\thechapter}{14pt}{\bfseries}
+\usepackage{cmap}					% поиск в PDF
+\usepackage{mathtext} 				% русские буквы в фомулах
+\usepackage[T2A]{fontenc}			% кодировка
+\usepackage[utf8]{inputenc}			% кодировка исходного текста
+\usepackage[english,russian]{babel}	% локализация и переносы
+\usepackage{ fancyhdr} % улучшенная нумерация страниц
+%%% Дополнительная работа с математикой
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % AMS
+\usepackage{icomma} % "Умная" запятая: $0,2$ --- число, $0, 2$ --- перечисление
+%\renewcommand{\sfdefault}{cmss}
+\usefont{T2A}{cmss}{m}{n}
+%% Номера формул
+\mathtoolsset{showonlyrefs=true} % Показывать номера только у тех формул, на которые есть \eqref{} в тексте.
+
+%% Шрифты
+\usepackage{euscript}	 % Шрифт Евклид
+\usepackage{mathrsfs} % Красивый матшрифт
+%% Свои команды
+\DeclareMathOperator{\sgn}{\mathop{sgn}}
+
+%% Перенос знаков в формулах (по Львовскому)
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+%\renewcommand{\sfdefault}{cmss}
+\usepackage{tempora}
+
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue
+}
+
+% Настройка разделов
+\titleformat{\section}{\large\bfseries}{}{0em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\LARGE Резюме}
+\end{center}
+
+\begin{center}
+    \textbf{\large Файтельсон Антон Александрович} \\
+    Телефон: +7 (910) 312-2108 \\
+    Email: z0tedd@gmail.com \\
+
+    GitHub: \url{https://github.com/z0tedd}
+\end{center}
+
+\vspace{10pt}
+
+\section{Желаемая позиция}
+\textbf{Middle Go-разработчик}
+
+\section{Профессиональный опыт}
+
+\subsection*{ООО «Desmax» (2021-2022)}
+\textbf{Роль:} Junior Go-разработчик \\
+\textbf{Описание компании:} Разработка программного обеспечения для автоматизации бухгалтерского учета. \\
+\textbf{Обязанности:}
+\begin{itemize}[noitemsep]
+    \item Разработка и поддержка RESTful API для основных учетных модулей.
+    \item Реализация модулей для обработки и хранения финансовых данных с использованием баз данных PostgreSQL.
+    \item Оптимизация кода и рефакторинг существующих сервисов для повышения производительности.
+    \item Участие в ревью кода, тестировании и дебаггинге приложений.
+    \item Документирование API и написание базовых тестов на unit-тестирование.
+\end{itemize}
+
+\subsection*{Студия разработки "Дракон и Молния", Курск (2022-2023)}
+\textbf{Роль:} Go-разработчик \\
+\textbf{Описание компании:} Разработка и поддержка высоконагруженных сайтов и веб-сервисов для заказчиков. \\
+\textbf{Обязанности:}
+\begin{itemize}[noitemsep]
+    \item Разработка backend-части веб-приложений на Go и поддержка микросервисной архитектуры.
+    \item Интеграция сторонних API и взаимодействие с различными веб-сервисами.
+    \item Создание и внедрение системы логирования и мониторинга сервисов.
+    \item Настройка CI/CD процессов для автоматизации сборок и развертывания.
+    \item Написание интеграционных и юнит-тестов для обеспечения качества кода.
+\end{itemize}
+
+\subsection*{Стартап «TextForEveryone» (2022-2023)}
+\textbf{Роль:} Go-разработчик \\
+\textbf{Описание компании:} Стартап, предоставляющий услуги speech-to-text для автоматизации обработки голосовых данных. \\
+\textbf{Обязанности:}
+\begin{itemize}[noitemsep]
+    \item Разработка серверных модулей для обработки и преобразования аудиоданных в текст.
+    \item Внедрение алгоритмов машинного обучения для распознавания речи и оптимизации работы сервиса.
+    \item Участие в разработке микросервисной архитектуры для масштабирования решений.
+    \item Работа с Docker и Kubernetes для контейнеризации и управления сервисами.
+    \item Повышение производительности сервисов и снижение задержек в системе.
+\end{itemize}
+
+\section{Образование}
+\textbf{Бакалавр компьютерных наук} \\
+Курский государственный технический университет, 2023
+
+\section{Навыки}
+\textbf{Языки программирования:} Go, SQL, JavaScript \\
+\textbf{Технологии и инструменты:} Docker, Kubernetes, REST API, gRPC, Git, PostgreSQL, Redis \\
+\textbf{Методологии разработки:} Agile, Scrum \\
+\textbf{Среды разработки:} Visual Studio Code, IntelliJ IDEA \\
+\textbf{Операционные системы:} Linux, macOS, Windows
+
+\section{Технологический стек}
+\begin{itemize}[noitemsep]
+    \item \textbf{Golang:} Разработка высокопроизводительных серверных приложений и микросервисов.
+    \item \textbf{Docker и Kubernetes:} Создание и управление контейнерами для развёртывания и масштабирования приложений.
+    \item \textbf{PostgreSQL и Redis:} Работа с базами данных, оптимизация запросов, хранение кэша.
+    \item \textbf{gRPC и REST:} Построение API, реализация сервисов для межсервисного взаимодействия.
+    \item \textbf{CI/CD:} Настройка процессов CI/CD (Jenkins, GitLab CI) для автоматизации разработки и выпуска.
+    \item \textbf{Тестирование:} Написание юнит и интеграционных тестов с использованием Go testing framework.
+\end{itemize}
+
+\section{Дополнительная информация}
+\begin{itemize}[noitemsep]
+    \item Уверенные навыки работы с распределёнными системами.
+    \item Опыт работы в высоконагруженных проектах и оптимизации серверного кода.
+    \item Готовность к обучению и внедрению новых технологий в процессе работы.
+\end{itemize}
+
+
+
+\end{document}
